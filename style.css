@@ -34,11 +34,12 @@ button {
 }
 
 .grid-toggle {
-    border: 1px solid black;
+    border: 1px solid lightgray;
 }
 
 .white {
     background-color: white;
+    opacity: 1;
 }
 
 .hover {
@@ -52,5 +53,5 @@ button {
     align-items: center;
     width: 700px;
     height: 700px;
-    background-color: bisque;
+    background-color: black;
 }

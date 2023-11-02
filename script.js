@@ -30,13 +30,21 @@ function createGrid(gridSize) {
             grid.classList.add('grid');
             grid.classList.add('white');
 
-            grid.addEventListener('mouseenter', (e) => {
+            /*grid.addEventListener('mouseenter', (e) => {
                 grid.classList.add('hover');
-            });
+            }); */
+
+            grid.addEventListener('mouseenter', darken);
 
             divContainer.appendChild(grid);
         }
     }
+}
+
+function darken(event) {
+    let newOpacity = getComputedStyle(event.target).opacity;
+    newOpacity -= 0.1;
+    event.target.style.opacity = newOpacity;
 }
 
 function getInputNewSize() {
