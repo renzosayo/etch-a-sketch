@@ -3,8 +3,17 @@ const divContainer = document.querySelector('.container');
 const divContainerCSS = getComputedStyle(divContainer);
 const divContainerSize = divContainerCSS.width.slice(0, -2);
 const sizeChanger = document.querySelector('.size-changer');
+const gridRemover = document.querySelector('.grid-remover');
 
 sizeChanger.addEventListener('click', getInputNewSize);
+gridRemover.addEventListener('click', toggleGridLines);
+
+function toggleGridLines() {
+    const grids = document.querySelectorAll('.grid');
+    for(const grid of grids) {
+        grid.classList.toggle('grid-toggle');
+    }
+}
 
 function createGrid(gridSize) {
 
@@ -19,6 +28,7 @@ function createGrid(gridSize) {
             grid.style.width = `${divContainerSize / gridSize}px`;
 
             grid.classList.add('grid');
+            grid.classList.add('white');
 
             grid.addEventListener('mouseenter', (e) => {
                 grid.classList.add('hover');
@@ -53,3 +63,4 @@ function removeAllChildren(parent) {
 }
 
 createGrid(16);
+toggleGridLines();
