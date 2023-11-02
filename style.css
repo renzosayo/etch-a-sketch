@@ -19,15 +19,7 @@ body {
 
 h1 {
     font-size: 50px;
-    margin: 20px;
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    max-width: calc(var(--grid-size) * 16);
+    margin: 10px;
 }
 
 .size-changer {
@@ -37,10 +29,18 @@ h1 {
 .grid {
     border: 1px solid black;
     background-color: white;
-    width: var(--grid-size);
-    height: var(--grid-size);
 }
 
 .hover {
     background-color: black;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 700px;
+    background-color: bisque;
 }
